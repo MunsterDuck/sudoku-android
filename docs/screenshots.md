@@ -68,6 +68,9 @@ accepted by Google Play and keep the whole dialog inside the image.
 - the debug APK from `./gradlew :app:assembleDebug`;
 - `adb` and the phone AVD `Medium_Phone_API_36`;
 - the tablet AVD `Medium_Tablet` (2560 × 1600, 320 dpi);
+- a host GPU for the emulator. Start both AVDs with `-gpu host`; software
+  rendering (SwiftShader) removes anti-aliasing and makes the thin digits,
+  notes and grid lines look jagged in the captures;
 - Python 3 for `scripts/screenshot-data.py`;
 - ImageMagick (`magick`) for cropping and resizing.
 
@@ -194,8 +197,9 @@ when saving. Keep the raw captures as PNG; only the store files are JPEG.
 The 7-inch and 10-inch sets are captured on different dp widths, not by
 downscaling one from the other. The 7-inch layout is 600 dp wide in portrait
 and 960 dp in landscape, so the action row uses a 3+2 grid and the board is
-smaller. The 10-inch layout is 800 dp / 1280 dp, where the action row fits in
-one row of five.
+smaller. The 10-inch layout is 800 dp / 1280 dp: the portrait action row fits in
+one row of five, while the landscape controls sit beside the board and use the
+3+2 grid.
 
 Use the tablet AVD `Medium_Tablet` for both profiles. Start from its native
 display and change only the logical size and density:
@@ -257,8 +261,8 @@ Every file must be `srgb`/`rgb` (no alpha), within the size limits and the
 - the status bar and the app are sharp, with no dialog clipped at the bottom;
 - the board has realistic digits and notes, not an empty test grid;
 - `01` shows fast mode, `02` and `03` (tablet) show straight lines;
-- the 7-inch and 10-inch sets have different layouts: 3+2 action buttons and
-  a smaller board versus five buttons in one row;
+- the 7-inch sets use the 3+2 action grid; the 10-inch portrait uses one row of
+  five; the 10-inch landscape uses the 3+2 grid beside the board;
 - history contains both a current/unfinished game and solved games;
 - records show a best time, not only dashes;
 - the How to play line about fast mode is complete;
