@@ -1,0 +1,1 @@
+Sudoku 1.3.1: Gleiche Ziffern werden schon beim Auswählen hervorgehoben, auch Notizen werden markiert und erscheinen größer im handgeschriebenen 3×3-Raster.

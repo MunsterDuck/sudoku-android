@@ -1,0 +1,1 @@
+Sudoku 1.3.1: el resaltado de dígitos iguales empieza al elegir un número, también se resaltan las notas y estas usan una cuadrícula manuscrita 3×3 más grande.

@@ -1,0 +1,1 @@
+Sudoku 1.3.1: o destaque de dígitos iguais começa ao escolher um número, as notas também são destacadas e usam uma grade manuscrita 3×3 maior.

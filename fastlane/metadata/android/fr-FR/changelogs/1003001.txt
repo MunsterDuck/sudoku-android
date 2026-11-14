@@ -1,0 +1,1 @@
+Sudoku 1.3.1 : le surlignage des chiffres identiques démarre dès la sélection, les notes sont aussi surlignées et utilisent une grille manuscrite 3×3 plus grande.
